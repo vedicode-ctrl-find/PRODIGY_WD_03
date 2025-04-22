@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 30px 0;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding: 0 50px;
+  gap: 40px;
+}
+
+/* Game board */
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 20px;
+}
+
+/* Individual cells */
+.cell {
+  width: 150px;
+  height: 150px;
+  background-color: #ffff;
+  border: 3px solid #333;
+  border-radius: 25px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell.x {
+  color: #7c4dff;
+  font-weight: bold;
+}
+
+.cell.o {
+  color: #00e5ff;
+  font-weight: bold;
+}
+
+/* Divider */
+.divider {
+  width: 4px;
+  height: 100%;
+  background-color: #512da8;
+  border-radius: 3px;
+}
+
+/* Right-side result panel */
+#resultContainer {
+  width: 200px;
+  text-align: center;
+}
+
+#status {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+#gifContainer img {
+  width: 250px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-left: 50px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #7c4dff, #00e5ff);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
