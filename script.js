@@ -1,7 +1,14 @@
+document.getElementById('startBtn').addEventListener('click', function () {
+  document.getElementById('popup').style.display = 'none';
+  document.getElementById('mainContent').classList.remove('hidden');
+});
+
+
 const cells = document.querySelectorAll('[data-cell]');
 const statusText = document.getElementById('status');
 const resetButton = document.getElementById('resetBtn');
 const gifContainer = document.getElementById('gifContainer');
+
 
 let currentPlayer = 'X';
 let board = Array(9).fill('');
@@ -22,12 +29,12 @@ function handleClick(index, cell) {
 
   if (checkWin(currentPlayer)) {
     statusText.textContent = `🎉 Player ${currentPlayer} Wins!`;
-    gifContainer.innerHTML = `<img src="winner.gif" alt="Winner GIF" />`; // Place your gif in same folder
+    gifContainer.innerHTML = `<img src="winner.gif" alt="Winner GIF" />`; 
     gifContainer.style.display = 'block';
     gameActive = false;
   } else if (board.every(cell => cell !== '')) {
     statusText.textContent = "🤝 It's a Draw!";
-    gifContainer.innerHTML = `<img src="draw.gif" alt="Draw GIF" />`;
+    gifContainer.innerHTML = `<img src="https://media.baamboozle.com/uploads/images/89276/1624268601_125806.gif" alt="Draw GIF" />`;
     gifContainer.style.display = 'block';
   } else {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
