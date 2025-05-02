@@ -34,7 +34,7 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background: linear-gradient(to right, #7c4dff, #00e5ff); /* purple to blue */
+  background: linear-gradient(to right, #7c4dff, #00e5ff); 
   color: white;
   transition: transform 0.2s ease;
 }
